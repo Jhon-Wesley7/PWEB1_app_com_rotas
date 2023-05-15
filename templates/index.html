@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro de Clientes</title>
+</head>
+<body>
+    <h1>Cadastro de Clientes</h1>
+
+    <a href="/cadastrar">Cadastrar novo cliente</a>
+
+    <h2>Clientes Cadastrados:</h2>
+    <ul>
+        {% for cliente in clientes %}
+            <li>
+                {{ cliente.nome }} - {{ cliente.email }} - {{ cliente.telefone }}
+                <a href="/editar/{{ cliente.id }}">Editar</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
